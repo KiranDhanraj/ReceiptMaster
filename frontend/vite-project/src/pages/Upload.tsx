@@ -11,6 +11,7 @@ export default function Upload() {
   const handleUpload = async () => {
     if (!file) {
       setError("Please select a file");
+      setSuccess("");
       return;
     }
     setError("");
@@ -26,12 +27,14 @@ export default function Upload() {
         },
       });
       setResult(response.data.codes ?? []);
+      setError("");
       setSuccess("Receipt sent. Receipt successfully uploaded.");
       setFile(null);
       if (fileInputRef.current) {
         fileInputRef.current.value = "";
       }
     } catch (err: any) {
+      setSuccess("");
       if (err?.response?.status === 429) {
         setError("Too many requests. Please wait and try again.");
       } else {
