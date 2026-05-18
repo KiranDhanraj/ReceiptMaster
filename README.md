@@ -299,9 +299,13 @@ Make sure Tesseract is added to PATH.
 
 # Example Receipt Processing
 
-## Example Receipt Image
-
+## Demo
+When the user uploads a receipt like this:
 ![Example Walmart Receipt](receipt2.jpg)
+
+It gets processed and the data from the receipt can be viewed on the Dashboard:
+![Dashboard](Dashboard_Example.jpg)
+
 
 ## Example OCR + Barcode Processing Flow
 
@@ -321,14 +325,6 @@ Power BI visualizes analytics
 
 ---
 
-# Example Dashboard
-
-Uploading this receipt
-
-
-![Power BI Dashboard Screenshot](dashboard-placeholder.png)
-
----
 
 # Example Upload Flow
 
@@ -355,29 +351,17 @@ Power BI visualizes analytics
   "barcode": "0123456789",
   "category": "Snacks",
   "brand": "Lays",
+  "name : Lays Classic Potato Chips"
+  "price : 3.00
   "description": "Classic Potato Chips"
+
 }
 ```
 
 ---
 
-# Power BI Integration
-
-Power BI connects directly to PostgreSQL.
-
-Example analytics:
-
-* Most common brands
-* Product category frequency
-* Receipt upload trends
-* User activity analytics
-* OCR extraction statistics
-
----
-
 # Security Features
 
-* Password hashing with bcrypt
 * JWT authentication
 * Protected routes
 * Environment variable configuration
@@ -387,10 +371,10 @@ Example analytics:
 
 # Future Improvements
 
-* Cloud image storage
+* More Extensive Barcode Lookup
+* Better UI
 * Receipt categorization AI
 * Better OCR preprocessing
-* ML-based product classification
 * Admin dashboard
 * User analytics
 * Real-time processing
@@ -442,7 +426,6 @@ Example analytics:
 ## Backend
 
 * Render
-* Railway
 
 ## Database
 
