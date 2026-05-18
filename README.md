@@ -3,7 +3,7 @@
 A full-stack receipt processing and analytics platform that allows users to:
 
 * Create accounts and authenticate securely
-* Upload scanned receipts/images
+* Upload scanned Walmart receipts/images
 * Extract OCR text from receipts
 * Detect and process barcodes
 * Store structured receipt/product data in PostgreSQL
@@ -42,6 +42,15 @@ Visit the vercel app: https://receipt-master-nu.vercel.app/
 * Brand analytics
 
 ---
+# Example Receipt Processing
+
+## Demo
+After uploading a receipt:
+![Example Walmart Receipt](receipt2.jpg)
+
+It gets processed and the data from the receipt can be viewed on the Dashboard:
+![Dashboard](Dashboard_Example.png)
+
 
 # Tech Stack
 
@@ -297,14 +306,6 @@ Make sure Tesseract is added to PATH.
 
 ---
 
-# Example Receipt Processing
-
-## Demo
-When the user uploads a receipt like this:
-![Example Walmart Receipt](receipt2.jpg)
-
-It gets processed and the data from the receipt can be viewed on the Dashboard:
-![Dashboard](Dashboard_Example.png)
 
 
 ## Example OCR + Barcode Processing Flow
