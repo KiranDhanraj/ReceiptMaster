@@ -46,6 +46,9 @@ Visit the vercel app: https://receipt-master-nu.vercel.app/
 
 ## Demo
 After uploading a receipt:
+
+
+
 ![Example Walmart Receipt](receipt2.jpg)
 
 It gets processed and the data from the receipt can be viewed on the Dashboard:
