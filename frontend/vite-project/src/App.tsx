@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import { BrowserRouter, Routes, Route, Navigate, Link, useNavigate } from "react-router-dom";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
@@ -8,7 +9,7 @@ import About from "./pages/About";
 import { clearTokens, getUsername, hasAccessToken } from "./services/api";
 
 type ProtectedRouteProps = {
-  children: JSX.Element;
+  children: ReactNode;
 };
 
 function ProtectedRoute({ children }: ProtectedRouteProps) {
