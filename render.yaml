@@ -9,15 +9,9 @@ services:
     envVars:
       - key: DATABASE_URL
         fromDatabase:
-          name: receiptwebapp-db
+          name: ReceiptMaster
           property: connectionString
       - key: JWT_SECRET_KEY
         generateValue: true
       - key: FRONTEND_ORIGINS
         value: http://localhost:5173
-
-databases:
-  - name: receiptwebapp-db
-    plan: free
-    databaseName: receipt_app
-    user: receipt_user
