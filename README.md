@@ -304,7 +304,7 @@ When the user uploads a receipt like this:
 ![Example Walmart Receipt](receipt2.jpg)
 
 It gets processed and the data from the receipt can be viewed on the Dashboard:
-![Dashboard](Dashboard_Example.jpg)
+![Dashboard](Dashboard_Example.png)
 
 
 ## Example OCR + Barcode Processing Flow
