@@ -18,7 +18,7 @@ from io import BytesIO
 from datetime import datetime, timedelta
 app = FastAPI()
 
-SECRET_KEY = os.getenv("JWT_SECRET_KEY", "change-me")
+SECRET_KEY = os.getenv("JWT_SECRET_KEY", "fallback")
 ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES = 60
 REFRESH_TOKEN_EXPIRE_DAYS = 7
@@ -95,16 +95,20 @@ def get_current_user(token: str = Depends(oauth2_scheme), db: Session = Depends(
     if user is None:
         raise credentials_exception
     return user
+frontend_origins = os.getenv("FRONTEND_ORIGINS", "http://localhost:5173")
+allow_origins = [origin.strip() for origin in frontend_origins.split(",") if origin.strip()]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],
+    allow_origins=allow_origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
-pytesseract.pytesseract.tesseract_cmd = (
-    r"C:\Program Files\Tesseract-OCR\tesseract.exe"
-)
+
+tesseract_cmd = os.getenv("TESSERACT_CMD")
+if tesseract_cmd:
+    pytesseract.pytesseract.tesseract_cmd = tesseract_cmd
 
 Base.metadata.create_all(bind=engine)
 @app.get("/")
