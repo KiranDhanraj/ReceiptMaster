@@ -8,6 +8,7 @@ A full-stack receipt processing and analytics platform that allows users to:
 * Detect and process barcodes
 * Store structured receipt/product data in PostgreSQL
 * Visualize analytics in Power BI
+Visit the vercel app: https://receipt-master-nu.vercel.app/
 
 ---
 
@@ -36,7 +37,6 @@ A full-stack receipt processing and analytics platform that allows users to:
 
 ## Analytics
 
-* Power BI dashboards
 * Product/category trends
 * Upload statistics
 * Brand analytics
@@ -72,13 +72,12 @@ A full-stack receipt processing and analytics platform that allows users to:
 
 ## Analytics
 
-* Microsoft Power BI
 
 ## Deployment
 
 * Render (backend)
 * Vercel (frontend)
-* PostgreSQL cloud hosting
+* [PostgreSQL](https://receipt-master-nu.vercel.app/) 
 
 ---
 
@@ -324,7 +323,8 @@ Power BI visualizes analytics
 
 # Example Dashboard
 
-*Add your Power BI dashboard screenshot here*
+Uploading this receipt
+
 
 ![Power BI Dashboard Screenshot](dashboard-placeholder.png)
 
